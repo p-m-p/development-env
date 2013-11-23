@@ -1,0 +1,18 @@
+{
+  "name": "web",
+  "default_attributes": {
+    "user": "vagrant",
+    "dotfiles": {
+      "path": "/home/vagrant/dotfiles",
+      "repo": "git@github.com:p-m-p/configs"
+    },
+    "packages": [ "git-core", "vim", "tmux" ]
+  },
+  "description": "Development box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "run_list": [
+    "recipe[root_ssh_agent::ppid]",
+    "recipe[web]"
+  ]
+}
