@@ -2,11 +2,17 @@
   "name": "web",
   "default_attributes": {
     "user": "vagrant",
+    "host": "192.168.33.10.xip.io",
     "dotfiles": {
       "path": "/home/vagrant/dotfiles",
       "repo": "git@github.com:p-m-p/configs"
     },
-    "packages": [ "git-core", "vim", "tmux" ]
+    "packages": [
+      "git-core",
+      "vim",
+      "tmux",
+      "nginx-full"
+    ]
   },
   "description": "Development box",
   "json_class": "Chef::Role",

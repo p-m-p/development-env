@@ -1,0 +1,9 @@
+server {
+  listen       80;
+  server_name  <%= node[:host] %>;
+
+  location / {
+    autoindex on;
+    root   /home/<%= node[:user] %>/sites/;
+  }
+}

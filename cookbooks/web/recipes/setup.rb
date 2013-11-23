@@ -19,3 +19,9 @@ git "/home/#{node[:user]}/.vim" do
   user node[:user]
   group node[:user]
 end
+
+directory "/home/#{node[:user]}/sites" do
+  action :create
+  user node[:user]
+  group node[:user]
+end
