@@ -8,6 +8,7 @@
       "repo": "git@github.com:p-m-p/configs"
     },
     "packages": [
+      "build-essential",
       "git-core",
       "vim",
       "tmux",
@@ -19,6 +20,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[root_ssh_agent::ppid]",
-    "recipe[web]"
+    "recipe[web]",
+    "recipe[nodejs::install_from_binary]"
   ]
 }

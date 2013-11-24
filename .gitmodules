@@ -1,3 +1,6 @@
 [submodule "cookbooks/root_ssh_agent"]
 	path = cookbooks/root_ssh_agent
 	url = git@github.com:dergachev/chef_root_ssh_agent.git
+[submodule "cookbooks/nodejs"]
+	path = cookbooks/nodejs
+	url = git@github.com:mdxp/nodejs-cookbook.git
