@@ -20,7 +20,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[root_ssh_agent::ppid]",
-    "recipe[web]",
-    "recipe[nodejs::install_from_binary]"
+    "recipe[nodejs::install_from_binary]",
+    "recipe[web]"
   ]
 }
