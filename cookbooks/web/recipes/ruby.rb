@@ -27,6 +27,8 @@ execute "ruby-switch --set ruby1.9.1" do
   not_if "ruby-switch --check | grep -q 'ruby1.9.1'"
 end
 
-gem_package 'bundler' do
-  gem_binary 'gem'
+['bundler', 'rake'].each do |g|
+  gem_package g do
+    gem_binary 'gem'
+  end
 end

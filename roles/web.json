@@ -2,18 +2,22 @@
   "name": "web",
   "default_attributes": {
     "user": "vagrant",
-    "host": "192.168.33.10.xip.io",
+    "host": "2t77wg.xip.io",
     "dotfiles": {
       "path": "/home/vagrant/dotfiles",
       "repo": "git@github.com:p-m-p/configs"
     },
-    "packages": [
-      "build-essential",
-      "git-core",
-      "vim",
-      "tmux",
-      "nginx-full"
-    ]
+    "justgo": {
+      "justgo-app": {
+        "host": "jg.2t77wg.xip.io"
+      },
+      "justgo-stats": {
+        "host": "jg-stats.2t77wg.xip.io"
+      }
+    },
+    "nginx": {
+      "dir": "/etc/nginx"
+    }
   },
   "description": "Development box",
   "json_class": "Chef::Role",
@@ -21,6 +25,7 @@
   "run_list": [
     "recipe[root_ssh_agent::ppid]",
     "recipe[nodejs::install_from_binary]",
-    "recipe[web]"
+    "recipe[web]",
+    "recipe[justgo]"
   ]
 }
