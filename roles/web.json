@@ -8,12 +8,8 @@
       "repo": "git@github.com:p-m-p/configs"
     },
     "justgo": {
-      "justgo-app": {
-        "host": "jg.2t77wg.xip.io"
-      },
-      "justgo-stats": {
-        "host": "jg-stats.2t77wg.xip.io"
-      }
+      "justgo-app": {},
+      "justgo-stats": {}
     },
     "nginx": {
       "dir": "/etc/nginx"
