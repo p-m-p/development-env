@@ -7,6 +7,3 @@
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = git@github.com:opscode-cookbooks/apt.git
-[submodule "cookbooks/justgo"]
-	path = cookbooks/justgo
-	url = git@github.com:JustGoMusic/chef.git
