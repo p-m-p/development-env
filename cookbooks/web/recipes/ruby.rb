@@ -14,7 +14,8 @@ script 'Run apt-get update' do
 end
 
 [
-  'ruby1.9.3',
+  'ruby2.1',
+  'ruby2.1-dev',
   'ruby-switch'
 ].each do |pkg|
   package pkg  do
@@ -22,9 +23,9 @@ end
   end
 end
 
-execute "ruby-switch --set ruby1.9.1" do
+execute "ruby-switch --set ruby2.1" do
   action :run
-  not_if "ruby-switch --check | grep -q 'ruby1.9.1'"
+  not_if "ruby-switch --check | grep -q 'ruby2.1'"
 end
 
 ['bundler', 'rake'].each do |g|
