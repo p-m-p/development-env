@@ -1,9 +1,19 @@
 server {
   listen       80;
   server_name  <%= node[:host] %>;
+  root   /home/<%= node[:user] %>/sites/;
+  index index.html index.php;
 
   location / {
     autoindex on;
-    root   /home/<%= node[:user] %>/sites/;
+  }
+
+  location ~ \.php$ {
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    #fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_pass 127.0.0.1:9000;
+    fastcgi_index index.php;
+    include fastcgi_params;
+    fastcgi_intercept_errors on;
   }
 }
