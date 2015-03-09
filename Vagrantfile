@@ -5,7 +5,7 @@ Vagrant.configure('2') do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network 'private_network', ip: "192.168.33.10"
-  config.vm.synced_folder "bridge", "/home/vagrant/sites"
+  config.vm.synced_folder "sites", "/home/vagrant/sites"
 
   config.ssh.forward_agent = true
 
